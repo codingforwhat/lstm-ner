@@ -28,5 +28,7 @@ Batch_size为200，表示每一次随机梯度下降使用200个词窗口
 
 4最终f1达到0.87，训练的模型效果很好
 
-5词向量文件链接：https://github.com/jiesutd/LatticeLSTM
+5现代汉语切分链接：https://klcl.pku.edu.cn/zygx/zyxz/index.htm
+
+词向量文件链接：https://github.com/jiesutd/LatticeLSTM
 

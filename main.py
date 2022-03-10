@@ -5,8 +5,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 the1=numpy.empty([750000,50])
 ci=dict()
-f4=open("ans.txt","r+",encoding='utf-8')
-f2=open("ctb.50d.txt","r+",encoding='utf-8')
+f4=open("f1-measure.txt","r+",encoding='utf-8')
+f2=open("词向量文件.txt","r+",encoding='utf-8')
 sum =0
 for lines in f2.readlines():#读入词向量文件并在字典中构建词语到词向量的索引
     if (lines[0]=='\n'): continue
@@ -19,7 +19,7 @@ f2.close()
 #print(the1,file=f4)
 the=torch.from_numpy(the1)
 shu=numpy.empty([750000],dtype=int)
-f2=open("no1.txt","r",encoding='utf-8')
+f2=open("现代汉语切分语料.txt","r",encoding='utf-8')
 left=0
 sum=0
 train_x=torch.rand(750000,5,50)
@@ -142,7 +142,7 @@ f3_y=torch.zeros(280000)
 f31=numpy.empty([280000],dtype=int)
 sum1=0
 
-f3=open("yanzhen1.txt","r",encoding='utf-8')
+f3=open("验证集.txt","r",encoding='utf-8')
 for line in f3.readlines():#读入验证集并存储词向量矩阵
     b=line.split("  ")
     for key in b:
